@@ -58,7 +58,9 @@ def bann_text():
     ██████╦╝██║░░██║██╔████╔██║██████╦╝█████╗░░██████╔╝░╚███╔╝░
     ██╔══██╗██║░░██║██║╚██╔╝██║██╔══██╗██╔══╝░░██╔══██╗░██╔██╗░
     ██████╦╝╚█████╔╝██║░╚═╝░██║██████╦╝███████╗██║░░██║██╔╝╚██╗
-    ╚═════╝░░╚════╝░╚═╝░░░░░╚═╝╚═════╝░╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝"""
+    ╚═════╝░░╚════╝░╚═╝░░░░░╚═╝╚═════╝░╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝
+    """
+    
     if ASCII_MODE:
         logo = ""
     version = "Version: "+__VERSION__
@@ -86,10 +88,10 @@ def format_phone(num):
 def do_zip_update():
     success = False
     if DEBUG_MODE:
-        zip_url = "https://github.com/iBrokenShadow/BomberX/archive/dev.zip"
+        zip_url = "https://github.com/iBrokenShadow/BomberX/archive/refs/heads/main.zip"
         dir_name = "BomberX-dev"
     else:
-        zip_url = "https://github.com/iBrokenShadow/BomberX/archive/master.zip"
+        zip_url = "https://github.com/iBrokenShadow/BomberX/archive/refs/heads/main.zip"
         dir_name = "BomberX-master"
     print(ALL_COLORS[0]+"Downloading ZIP ... "+RESET_ALL)
     response = requests.get(zip_url)
